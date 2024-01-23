@@ -5,10 +5,13 @@ import (
 	"math/rand"
 )
 
+// Namer specifies an interface for generating random names.
 type Namer interface {
+	// Name returns a random name.
 	Name() string
 }
 
+// New creates a new Namer.
 func New() Namer {
 	return &defaultNamer{}
 }
