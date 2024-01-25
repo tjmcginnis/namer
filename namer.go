@@ -24,13 +24,13 @@ const (
 )
 
 var (
-	nNoun      = len(nouns)
 	nAdjective = len(adjectives)
+	nNoun      = len(nouns)
 )
 
 func (n *defaultNamer) Name() string {
-	noun := nouns[rand.Intn(nNoun)]
 	adjective := adjectives[rand.Intn(nAdjective)]
+	noun := nouns[rand.Intn(nNoun)]
 	digits := rand.Intn(ub-lb) + lb
-	return fmt.Sprintf("%s-%s-%d", noun, adjective, digits)
+	return fmt.Sprintf("%s-%s-%d", adjective, noun, digits)
 }

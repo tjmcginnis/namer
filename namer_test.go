@@ -16,8 +16,8 @@ func TestNew(t *testing.T) {
 }
 
 const (
-	nounIdx      = 0
-	adjectiveIdx = 1
+	adjectiveIdx = 0
+	nounIdx      = 1
 	digitsIdx    = 2
 )
 
@@ -34,8 +34,8 @@ func TestName(t *testing.T) {
 			t.Fatalf("Name() returned malformed name: %s", name)
 		}
 
-		checkNoun(t, parts[nounIdx])
 		checkAdjective(t, parts[adjectiveIdx])
+		checkNoun(t, parts[nounIdx])
 		checkDigits(t, parts[digitsIdx])
 	}
 }
