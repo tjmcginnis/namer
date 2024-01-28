@@ -1,3 +1,9 @@
+// Package namer implements a Heroku-like random name-generator.
+//
+// Names have the format {noun}-{adjective}-{number}, and are generated
+// using a random noun, random adjective, and random four digit number
+// between 1000 and 9999. The noun and adjective are chosen from a fixed
+// list of 74 nouns and 61 adjectives.
 package namer
 
 import (
